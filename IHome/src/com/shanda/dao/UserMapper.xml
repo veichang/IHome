@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.shanda.dao.UserDao">
+
+<select id="findAll" resultType="com.shanda.entity.User">
+	 select * from user
+</select>
+
+<!-- 添加一个账户信息 -->
+<insert id="save" parameterType="com.shanda.entity.User">
+	insert into user(name,job,qq,weixin,phone,address,type) values(
+		#{name},
+		#{job,jdbcType=VARCHAR},
+		#{qq,jdbcType=VARCHAR},
+		#{weixin,jdbcType=VARCHAR},
+		#{phone,jdbcType=VARCHAR},
+		#{address,jdbcType=VARCHAR},
+		#{type,jdbcType=VARCHAR}
+	)
+</insert>
+</mapper>
