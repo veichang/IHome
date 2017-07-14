@@ -34,6 +34,7 @@ public class UserController {
 	@RequestMapping("/submitUser.do")
 	public String submitUser(User user) {
 		user.setName(user.getName());
+		user.setPassport(user.getPassport());
 		user.setJob(user.getJob());
 		user.setQq(user.getQq());
 		user.setWeixin(user.getWeixin());

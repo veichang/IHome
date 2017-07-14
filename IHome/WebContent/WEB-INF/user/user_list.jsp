@@ -14,7 +14,6 @@
 		<tr>
 			<th>用户id</th>
 			<th>用户名</th>
-			<th>年龄</th>
 			<th>工作</th>
 			<th>QQ号</th>
 			<th>微信</th>
@@ -26,7 +25,6 @@
 			<tr>
 				<td>${user.id }</td>
 				<td>${user.name }</td>
-				<td>${user.age }</td>
 				<td>${user.job }</td>
 				<td>${user.qq }</td>
 				<td>${user.weixin }</td>

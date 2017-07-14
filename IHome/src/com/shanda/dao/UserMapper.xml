@@ -10,8 +10,9 @@
 
 <!-- 添加一个账户信息 -->
 <insert id="save" parameterType="com.shanda.entity.User">
-	insert into user(name,job,qq,weixin,phone,address,type) values(
+	insert into user(name,passport, job, qq, weixin, phone,address,type) values(
 		#{name},
+		#{passport},
 		#{job,jdbcType=VARCHAR},
 		#{qq,jdbcType=VARCHAR},
 		#{weixin,jdbcType=VARCHAR},
@@ -20,4 +21,9 @@
 		#{type,jdbcType=VARCHAR}
 	)
 </insert>
+
+<select id="findByName" parameterType="java.lang.String" resultType="com.shanda.entity.User">
+	select * from user where name = #{name}
+</select>
+
 </mapper>

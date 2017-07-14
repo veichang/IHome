@@ -14,7 +14,6 @@
                 <li><a href="user/findUser.do" class="admin_off"></a></li>
                 <li><a href="user/user_info.html" class="information_off"></a></li>
             </ul>
-            <a href="http://localhost:8080/IHome/index.jsp""><img src="images/login_btn.png" /></a>
         </div>
     </body>
 </html>

@@ -6,7 +6,7 @@ public class User {
 
 	private Integer id;
 	private String name;;
-	private Integer age;
+	private String passport;
 	private String job;
 	private String qq;
 	private String weixin;
@@ -31,11 +31,12 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Integer getAge() {
-		return age;
+
+	public String getPassport() {
+		return passport;
 	}
-	public void setAge(Integer age) {
-		this.age = age;
+	public void setPassport(String passport) {
+		this.passport = passport;
 	}
 	public String getJob() {
 		return job;

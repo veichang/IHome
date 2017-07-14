@@ -11,4 +11,5 @@ import com.shanda.entity.User;
 public interface UserDao {
 	boolean save(User user);
 	List<User> findAll();
+	User findByName(String name);
 }

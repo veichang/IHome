@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50718
 File Encoding         : 65001
 
-Date: 2017-07-10 23:06:56
+Date: 2017-07-14 00:21:49
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,22 +20,28 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `id` int(4) NOT NULL AUTO_INCREMENT COMMENT 'ÓÃ»§id',
-  `name` varchar(20) DEFAULT NULL COMMENT 'ÓÃ¼ÇÃû',
-  `age` int(4) DEFAULT NULL COMMENT 'ÄêÁä',
-  `job` varchar(255) DEFAULT NULL COMMENT '¹¤×÷',
-  `qq` varchar(20) DEFAULT NULL COMMENT 'QQºÅ',
-  `weixin` varchar(255) DEFAULT NULL COMMENT 'Î¢ĞÅºÅ',
-  `phone` varchar(11) NOT NULL COMMENT 'ÊÖ»úºÅ',
-  `address` varchar(255) DEFAULT NULL COMMENT 'µØÖ·',
-  `type` varchar(255) NOT NULL COMMENT 'ÓÃ»§ÀàĞÍ',
-  PRIMARY KEY (`id`,`phone`)
+  `id` int(4) NOT NULL AUTO_INCREMENT COMMENT 'ç”¨æˆ·id',
+  `name` varchar(20) DEFAULT NULL COMMENT 'ç”¨è®°å',
+  `passport` varchar(255) NOT NULL,
+  `job` varchar(255) DEFAULT NULL COMMENT 'å·¥ä½œ',
+  `qq` varchar(20) DEFAULT NULL COMMENT 'QQå·',
+  `weixin` varchar(255) DEFAULT NULL COMMENT 'å¾®ä¿¡å·',
+  `phone` varchar(11) NOT NULL COMMENT 'æ‰‹æœºå·',
+  `address` varchar(255) DEFAULT NULL COMMENT 'åœ°å€',
+  `type` varchar(255) NOT NULL COMMENT 'ç”¨æˆ·ç±»å‹',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'me', '22', 'Èí¼ş¹¤³ÌÊ¦', '1990041527', 'veichang', '1509055227', 'ÖĞ¹úÒ»¸öÃÀÀöµÄµØ·½', '¹ÜÀíÔ±');
-INSERT INTO `user` VALUES ('2', 'me', '22', 'Èí¼ş¹¤³ÌÊ¦', '1990041527', null, '1509055227', '·Ü¶·°É£¬ĞÖµÜ£¡', 'ÆÕÍ¨ÓÃ»§');
-INSERT INTO `user` VALUES ('10', 'zhong', null, 'work', 'qq', 'weixin', '15090552277', 'º£µíÇøÎ÷¶şÆì', '¹ÜÀíÔ±');
-INSERT INTO `user` VALUES ('12', 'ÖÙÎ¬²ı', null, 'RD', null, 'veichang', '15090552277', 'É½´óÈí¼şÑ§Ôº', '¹ÜÀíÔ±');
+INSERT INTO `user` VALUES ('1', 'me', '', 'è½¯ä»¶å·¥ç¨‹å¸ˆ', '1990041527', 'veichang', '1509055227', 'ä¸­å›½ä¸€ä¸ªç¾ä¸½çš„åœ°æ–¹', 'ç®¡ç†å‘˜');
+INSERT INTO `user` VALUES ('2', 'me', '', 'è½¯ä»¶å·¥ç¨‹å¸ˆ', '1990041527', null, '1509055227', 'å¥‹æ–—å§ï¼Œå…„å¼Ÿï¼', 'æ™®é€šç”¨æˆ·');
+INSERT INTO `user` VALUES ('10', 'zhong', '', 'work', 'qq', 'weixin', '15090552277', 'æµ·æ·€åŒºè¥¿äºŒæ——', 'ç®¡ç†å‘˜');
+INSERT INTO `user` VALUES ('12', 'ä»²ç»´æ˜Œ', '', 'RD', null, 'veichang', '15090552277', 'å±±å¤§è½¯ä»¶å­¦é™¢', 'ç®¡ç†å‘˜');
+INSERT INTO `user` VALUES ('13', '', '', '', null, '', '', '', 'æ™®é€šç”¨æˆ·');
+INSERT INTO `user` VALUES ('14', '', '', '', null, '', '', '', 'ç®¡ç†å‘˜');
+INSERT INTO `user` VALUES ('15', '', '', '', null, '', '', '', 'ç®¡ç†å‘˜');
+INSERT INTO `user` VALUES ('16', 'dada', '123456', '', null, 'veichang', '15090552277', '', 'ç®¡ç†å‘˜');
+INSERT INTO `user` VALUES ('17', '', '', '', null, '', '', '', 'ç®¡ç†å‘˜');
+INSERT INTO `user` VALUES ('18', 'admin', 'admin', 'RD', null, 'veichang', '15090552277', 'haidian', 'ç®¡ç†å‘˜');
