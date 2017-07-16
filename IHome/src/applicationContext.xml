@@ -61,4 +61,16 @@
 		<property name="prefix" value="/WEB-INF/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
+	
+	<!-- 注册拦截器 -->
+	<mvc:interceptors>
+		<!-- 登陆检查拦截器 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<mvc:exclude-mapping path="/login/toLogin.do"/>
+			<mvc:exclude-mapping path="/login/login.do"/>
+			<bean class="com.shanda.interceptor.LoginInterceptor"></bean>
+		</mvc:interceptor>
+		
+	</mvc:interceptors>
 </beans>

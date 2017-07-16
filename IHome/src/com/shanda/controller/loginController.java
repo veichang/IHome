@@ -6,6 +6,8 @@ import java.io.PrintWriter;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -15,11 +17,17 @@ import com.shanda.entity.User;
 
 
 @Controller
-@RequestMapping("/log")
-public class login {
+@RequestMapping("/login")
+public class loginController {
 	
 	@Resource
 	private UserDao userDao;
+	
+	@RequestMapping("/toLogin.do")
+	public String toLogin() {
+		return "main/login";
+	}
+	
 	
 	@RequestMapping("/login.do")
 	public void login(HttpServletRequest request, HttpServletResponse response) {
@@ -31,11 +39,13 @@ public class login {
 			String passport = request.getParameter("passport");
 			User user = userDao.findByName(name);
 			int status;
-			boolean flage = false;
 			if(user == null) {
 				status = 0;
 			}else {
-				if(passport.equals(user.getPassport())) {
+				
+				HttpSession session = request.getSession();
+				if(passport != "" && passport.equals(user.getPassport())) {
+					session.setAttribute("user", user);
 					status = 1;
 				}else {
 					status = 2;
@@ -47,4 +57,11 @@ public class login {
 			e.printStackTrace();
 		}
 	}
+	
+	@RequestMapping("/toIndex.do")
+	public String toIndex(HttpServletRequest request) {
+		return "main/index";
+	}
+	
+	
 }

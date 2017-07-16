@@ -7,12 +7,12 @@ function btsubmit() {
 		return;
 	}
 	$.ajax({
-		url:"log/login.do",
+		url:"login.do",
 		type:"post",
 		data:{name:name,passport:passport},
 		success:function(res){
 			if(res == 1) {
-				window.location.href="index.jsp";
+				window.location.href="toIndex.do";
 				return;
 			}else {
 				alert("用户名或密码不存在");

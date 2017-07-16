@@ -3,10 +3,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>3D家居</title>
-        <link type="text/css" rel="stylesheet" media="all" href="styles/global.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="styles/global_color.css" /> 
-        <script language="javascript" type="text/javascript" src="js/jquery-1.11.1.js"></script>
-        <script type="text/javascript" src="js/login.js"></script>
+        <link type="text/css" rel="stylesheet" media="all" href="../styles/global.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="../styles/global_color.css" /> 
+        <script language="javascript" type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
     </head>
     <body class="index">
     <form action="login.do">
@@ -25,13 +25,13 @@
                 <tr>
                     <td class="login_info">验证码：</td>
                     <td class="width70"><input name="" type="text" class="width70" /></td>
-                    <td><img src="images/valicode.jpg" alt="验证码" title="点击更换" /></td>  
+                    <td><img src="../images/valicode.jpg" alt="验证码" title="点击更换" /></td>  
                     <td><span class="required">验证码错误</span></td>              
                 </tr>            
                 <tr>
                     <td></td>
                     <td class="login_button" colspan="2">
-                        <img src="images/login_btn.png" onclick="javascript:btsubmit();">&nbsp;&nbsp;&nbsp;&nbsp;<a href="user/addUser.do"><img src="images/regi_btn.png" /></a>
+                        <img src="../images/login_btn.png" onclick="javascript:btsubmit();"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../user/addUser.do"><img src="../images/regi_btn.png" /></a>
                 
                     </td>    
                     <td><span class="required">用户名或密码错误，请重试</span></td>                

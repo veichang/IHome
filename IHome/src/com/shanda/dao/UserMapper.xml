@@ -25,5 +25,38 @@
 <select id="findByName" parameterType="java.lang.String" resultType="com.shanda.entity.User">
 	select * from user where name = #{name}
 </select>
+<select id="findById" parameterType="java.lang.Integer" resultType="com.shanda.entity.User">
+	select * from user where id = #{id}
+</select>
 
+<update id="updateUser" parameterType="com.shanda.entity.User">
+	update user
+	<set>
+		<if test="name !=null">
+			name = #{name},
+		</if>
+			<if test="job !=null">
+			job = #{job},
+		</if>
+			<if test="qq !=null">
+			qq = #{qq},
+		</if>
+			<if test="weixin !=null">
+			weixin = #{weixin},
+		</if>
+		<if test="phone !=null">
+			phone = #{phone},
+		</if>
+		<if test="address !=null">
+			address = #{address},
+		</if>
+		<if test="phone !=null">
+			phone = #{phone},
+		</if>
+		<if test="type !=null">
+			type = #{type}
+		</if>
+	</set> 
+	where id = #{id}
+</update>
 </mapper>
